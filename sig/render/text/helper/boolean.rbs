@@ -1,0 +1,17 @@
+module Render
+  module Text
+    module Helper
+      class TrueClass
+        def to_yn: (capital_letter: bool) -> String
+
+        def to_yes_no: (capital_letter: bool) -> String
+      end
+
+      class FalseClass
+        def to_yn: (capital_letter: bool) -> String
+
+        def to_yes_no: (capital_letter: bool) -> String
+      end
+    end
+  end
+end
