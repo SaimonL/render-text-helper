@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Added methods to boolean module
 module BooleanHelper
   def to_yn(capital_letter: true)
     if self
