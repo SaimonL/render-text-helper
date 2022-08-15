@@ -34,6 +34,23 @@ defaults to "."
 'ele___'
 ```
 
+### to yes no
+
+This function converts a boolean to yes or no.
+
+```ruby
+true.to_yes_no
+'yes'
+
+true.to_yes_no(capital_letter: true)
+'YES'
+
+false.to_yes_no
+'no'
+
+false.to_yes_no(capital_letter: true)
+'NO'
+```
 
 ## Contributing
 
