@@ -36,7 +36,7 @@ defaults to "."
 
 ### to yes no
 
-This function converts a boolean to yes or no.
+This function returns a string from a boolean to yes or no.
 
 ```ruby
 true.to_yes_no
@@ -50,6 +50,24 @@ false.to_yes_no
 
 false.to_yes_no(capital_letter: true)
 'NO'
+```
+
+### to yn
+
+This function returns a string from a boolean to Y or N
+
+```ruby
+true.to_yn
+'Y'
+
+true.to_yn(capital_letter: false)
+'y'
+
+false.to_yn
+'N'
+
+false.to_yn(capital_letter: false)
+'n'
 ```
 
 ## Contributing
