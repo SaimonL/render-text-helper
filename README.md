@@ -1,4 +1,5 @@
 # Render::Text::Helper
+# render-text-helper [![Build Status][gh-actions-image]][gh-actions-link] [![Inline docs][inchpages-image]][inchpages-link]
 
 This gem extends text manipulation to classes like String, Boolean etc..
 
