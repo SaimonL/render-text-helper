@@ -11,3 +11,10 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Metrics/BlockLength:
+  Max: 50
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+  IndentOneStep: true

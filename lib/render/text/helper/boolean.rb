@@ -10,11 +10,12 @@ module BooleanHelper
     end
   end
 
-  def to_yes_no(capital_letter: false)
+  # casting: capitalize | upcase | downcase
+  def to_yes_no(casting = :capitalize)
     if self
-      capital_letter ? 'YES' : 'yes'
+      'yes'.send(casting.to_sym)
     else
-      capital_letter ? 'NO' : 'no'
+      'no'.send(casting.to_sym)
     end
   end
 end

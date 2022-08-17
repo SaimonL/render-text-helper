@@ -37,19 +37,21 @@ defaults to "."
 ### to yes no
 
 This function returns a string from a boolean to yes or no.
+It takes in optional casting parameter which can be either capitalize, upcase, or downcase.
 
 ```ruby
 true.to_yes_no
-'yes'
+'Yes'
 
-true.to_yes_no(capital_letter: true)
+true.to_yes_no(:upcase)
 'YES'
 
-false.to_yes_no
+false.to_yes_no(:downcase)
 'no'
 
-false.to_yes_no(capital_letter: true)
-'NO'
+false.to_yes_no
+false.to_yes_no(:capitalize)
+'No'
 ```
 
 ### to yn
