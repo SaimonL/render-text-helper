@@ -2,7 +2,7 @@ module Render
   module Text
     module Helper
       class String
-        def limit_print: (limit: Integer, more_indicator: String) -> String
+        def limit_print: (limit: Integer, more_indicator: String, indicator_length: Integer) -> String
       end
     end
   end

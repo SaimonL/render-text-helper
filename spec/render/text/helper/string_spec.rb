@@ -2,10 +2,11 @@
 
 RSpec.describe String do
   describe '#limit_print' do
-    subject { data.limit_print(limit: limit, more_indicator: more_indicator) }
+    subject { data.limit_print(limit: limit, more_indicator: more_indicator, indicator_length: indicator_length) }
 
     let(:limit) { 6 }
     let(:more_indicator) { '.' }
+    let(:indicator_length) { 3 }
 
     context 'with short string' do
       let(:data) { 'cat' }
@@ -30,6 +31,13 @@ RSpec.describe String do
       let(:more_indicator) { '*' }
 
       it { is_expected.to eq('elepha***') }
+    end
+
+    context 'with different indicator_length' do
+      let(:data) { 'elephant' }
+      let(:indicator_length) { 0 }
+
+      it { is_expected.to eq('elepha') }
     end
   end
 end

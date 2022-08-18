@@ -18,6 +18,10 @@ module BooleanHelper
       'no'.send(casting.to_sym)
     end
   end
+
+  def to_i
+    self ? 1 : 0
+  end
 end
 
 class TrueClass

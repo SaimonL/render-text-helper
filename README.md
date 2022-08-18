@@ -17,8 +17,10 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ### Limit Print
 
 This function makes sure that the string does not go over a specific given limit.
-It has two parameters "limit" which is defaulted to 32 and "more_indicator" which
-defaults to "."
+It has three parameters. 
+"limit" which is defaulted to 32 and controls how far to show the characters.
+"more_indicator" which defaults to "." and controls which character to use to indicate there are more.
+"indicator_length" which defaults to 3 and controls how many times to show the more indicator.
 
 ```ruby
 'hello'.limit_print
@@ -27,11 +29,14 @@ defaults to "."
 'elephant'.limit_print(limit: 2)
 'el...'
 
-'elephant'.limit_print(limit: 2, more_indicator: '')
+'elephant'.limit_print(limit: 2, indicator_length: 0)
 'el'
 
 'elephant'.limit_print(limit: 3, more_indicator: '_')
 'ele___'
+
+'elephant'.limit_print(limit: 4, more_indicator: '*', indicator_length: 2)
+'elep**'
 ```
 
 ### to yes no
@@ -71,6 +76,10 @@ false.to_yn
 false.to_yn(capital_letter: false)
 'n'
 ```
+
+### to_i
+
+Returns 1 for true and 0 for false on a boolean object.
 
 ## Contributing
 

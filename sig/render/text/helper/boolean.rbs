@@ -4,13 +4,17 @@ module Render
       class TrueClass
         def to_yn: (capital_letter: bool) -> String
 
-        def to_yes_no: (capital_letter: bool) -> String
+        def to_yes_no: (casting: Symbol) -> String
+
+        def to_i: -> Integer
       end
 
       class FalseClass
         def to_yn: (capital_letter: bool) -> String
 
-        def to_yes_no: (capital_letter: bool) -> String
+        def to_yes_no: (casting: Symbol) -> String
+
+        def to_i: -> Integer
       end
     end
   end

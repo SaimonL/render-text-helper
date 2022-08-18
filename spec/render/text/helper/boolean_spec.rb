@@ -3,6 +3,12 @@
 RSpec.describe TrueClass do
   let(:boolean) { true }
 
+  describe '#to_i' do
+    subject { boolean.to_i }
+
+    it { is_expected.to eql(1) }
+  end
+
   describe '#to_yn' do
     subject { boolean.to_yn(capital_letter: capital_letter) }
 
@@ -50,6 +56,12 @@ end
 
 RSpec.describe FalseClass do
   let(:boolean) { false }
+
+  describe '#to_i' do
+    subject { boolean.to_i }
+
+    it { is_expected.to eql(0) }
+  end
 
   describe '#to_yn' do
     subject { boolean.to_yn(capital_letter: capital_letter) }
