@@ -2,7 +2,7 @@
 
 RSpec.describe String do
   describe '#limit_print' do
-    subject { data.limit_print(limit: limit, more_indicator: more_indicator, indicator_length: indicator_length) }
+    subject { data.limit_print(limit:, more_indicator:, indicator_length:) }
 
     let(:limit) { 6 }
     let(:more_indicator) { '.' }

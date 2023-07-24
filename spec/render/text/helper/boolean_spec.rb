@@ -10,7 +10,7 @@ RSpec.describe TrueClass do
   end
 
   describe '#to_yn' do
-    subject { boolean.to_yn(capital_letter: capital_letter) }
+    subject { boolean.to_yn(capital_letter:) }
 
     context 'with capital_letter being true' do
       let(:capital_letter) { true }
@@ -64,7 +64,7 @@ RSpec.describe FalseClass do
   end
 
   describe '#to_yn' do
-    subject { boolean.to_yn(capital_letter: capital_letter) }
+    subject { boolean.to_yn(capital_letter:) }
 
     context 'with capital_letter being true' do
       let(:capital_letter) { true }
