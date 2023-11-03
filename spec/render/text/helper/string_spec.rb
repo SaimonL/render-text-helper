@@ -55,12 +55,6 @@ RSpec.describe String do
         it { is_expected.to eq(expected_array) }
       end
 
-      context 'with | separator' do
-        let(:data) { 'cat| dog | map |pat' }
-
-        it { is_expected.to eq(expected_array) }
-      end
-
       context 'with space separator' do
         let(:data) { ' cat dog   map  pat ' }
 

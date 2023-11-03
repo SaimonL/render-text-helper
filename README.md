@@ -51,9 +51,6 @@ It also strips whitespace.
 ' cat , dog, matt,pat '.to_smart_array
 ['cat', 'dog', 'matt', 'pat']
 
-' cat | dog| matt|pat '.to_smart_array
-['cat', 'dog', 'matt', 'pat']
-
 ' cat   dog  matt pat '.to_smart_array
 ['cat', 'dog', 'matt', 'pat']
 

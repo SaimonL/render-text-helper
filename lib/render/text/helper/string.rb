@@ -11,12 +11,11 @@ class String
 
   # outputs an array
   def to_smart_array(separator = nil)
-    return [] if self.nil?
+    return [] if nil?
 
-    return self.split(separator).map(&:strip) unless separator.nil?
-    return self.split(',').map(&:strip) if self.include?(',')
-    return self.split('|').map(&:strip) if self.include?('|')
+    return split(separator).map(&:strip) unless separator.nil?
+    return split(',').map(&:strip) if include?(',')
 
-    self.split.map(&:strip)
+    split.map(&:strip)
   end
 end
