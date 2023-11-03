@@ -1,5 +1,9 @@
 ## Changelog
 
+## [0.3.1] - 2023-11-3
+
+- Added to_smart_array
+
 ## [0.3.0] - 2022-08-18
 
 - Added the params "more_indicator" to "limit_print"

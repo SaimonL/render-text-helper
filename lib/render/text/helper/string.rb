@@ -8,4 +8,15 @@ class String
 
     [self[0...limit], (more_indicator * indicator_length)].join
   end
+
+  # outputs an array
+  def to_smart_array(separator = nil)
+    return [] if self.nil?
+
+    return self.split(separator).map(&:strip) unless separator.nil?
+    return self.split(',').map(&:strip) if self.include?(',')
+    return self.split('|').map(&:strip) if self.include?('|')
+
+    self.split.map(&:strip)
+  end
 end

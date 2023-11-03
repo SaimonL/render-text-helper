@@ -40,4 +40,40 @@ RSpec.describe String do
       it { is_expected.to eq('elepha') }
     end
   end
+
+  describe '#to_smart_array' do
+    subject { data.to_smart_array(separator) }
+
+    let(:expected_array) { %w[cat dog map pat] }
+
+    context 'without any separator specified' do
+      let(:separator) { nil }
+
+      context 'with comma separator' do
+        let(:data) { 'cat, dog , map ,pat' }
+
+        it { is_expected.to eq(expected_array) }
+      end
+
+      context 'with | separator' do
+        let(:data) { 'cat| dog | map |pat' }
+
+        it { is_expected.to eq(expected_array) }
+      end
+
+      context 'with space separator' do
+        let(:data) { ' cat dog   map  pat ' }
+
+        it { is_expected.to eq(expected_array) }
+      end
+    end
+
+    context 'with a separator specified' do
+      let(:separator) { '!' }
+
+      let(:data) { 'cat! dog ! map !pat' }
+
+      it { is_expected.to eq(expected_array) }
+    end
+  end
 end

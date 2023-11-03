@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['Saimon Lovell']
   spec.email = ['staysynchronize@gmail.com']
 
-  spec.summary = 'Does some string malnutrition'
-  spec.description = 'Limit the render text, convert boolean to text etc'
+  spec.summary = 'Does some string manipulation'
+  spec.description = 'Add some more functionality to string and booleans'
   spec.homepage = 'https://github.com/SaimonL/render-text-helper'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'

@@ -39,6 +39,28 @@ It has three parameters.
 'elep**'
 ```
 
+### To Smart Array
+
+Take a string and splits it to an array by ",", "|", space, or by a passed parameter.
+It also strips whitespace.
+
+```ruby
+'cat, dog, matt'.to_smart_array
+['cat', 'dog', 'matt']
+
+' cat , dog, matt,pat '.to_smart_array
+['cat', 'dog', 'matt', 'pat']
+
+' cat | dog| matt|pat '.to_smart_array
+['cat', 'dog', 'matt', 'pat']
+
+' cat   dog  matt pat '.to_smart_array
+['cat', 'dog', 'matt', 'pat']
+
+' cat # dog# matt#pat '.to_smart_array('#')
+['cat', 'dog', 'matt', 'pat']
+```
+
 ### to yes no
 
 This function returns a string from a boolean to yes or no.
