@@ -21,6 +21,6 @@ class String
 
   # outputs string where it replaces \n or \r with actual return
   def escaped_newline_to_newline
-    self.gsub('\n', "\n").gsub('\r', "\n")
+    gsub('\n', "\n").gsub('\r', "\n")
   end
 end
