@@ -1,4 +1,8 @@
-## Changelog
+# Changelog
+
+## [0.3.2] - 2024-12-26
+
+- Replaces escaped return with actual return
 
 ## [0.3.1] - 2023-11-3
 

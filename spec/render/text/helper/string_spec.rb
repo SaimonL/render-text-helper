@@ -70,4 +70,34 @@ RSpec.describe String do
       it { is_expected.to eq(expected_array) }
     end
   end
+
+  describe '#escaped_newline_to_newline' do
+    subject { data.escaped_newline_to_newline }
+
+    let(:expected_data) { "Hello world!\n\n How are you?" }
+
+    context 'with r and n' do
+      let(:data) { 'Hello world!\n\r How are you?' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with r and r' do
+      let(:data) { 'Hello world!\r\r How are you?' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with n and n' do
+      let(:data) { 'Hello world!\n\n How are you?' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with no escaped' do
+      let(:data) { 'Hello world! How are you?' }
+
+      it { is_expected.to eq(data) }
+    end
+  end
 end
