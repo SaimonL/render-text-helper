@@ -100,4 +100,46 @@ RSpec.describe String do
       it { is_expected.to eq(data) }
     end
   end
+
+  describe '#to_titleize' do
+    subject { data.to_titleize }
+
+    let(:expected_data) { 'Hello World!' }
+
+    context 'with all lowercase' do
+      let(:data) { 'hello world!' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with all uppercase' do
+      let(:data) { 'HELLO WORLD!' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with having underscore' do
+      let(:data) { 'hello_world!' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with having spaces' do
+      let(:data) { ' hello world! ' }
+
+      it { is_expected.to eq(expected_data) }
+    end
+
+    context 'with 1 character' do
+      let(:data) { 'a' }
+
+      it { is_expected.to eq('A') }
+    end
+
+    context 'with no character' do
+      let(:data) { '' }
+
+      it { is_expected.to eq('') }
+    end
+  end
 end

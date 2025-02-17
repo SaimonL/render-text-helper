@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.0] - 2025-17-02
+
+- Added to_titleize
+
 ## [0.3.2] - 2024-12-26
 
 - Replaces escaped return with actual return
