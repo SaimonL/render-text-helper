@@ -58,6 +58,24 @@ It also strips whitespace.
 ['cat', 'dog', 'matt', 'pat']
 ```
 
+### To Titleize
+
+Titleize for none rails project. It also removes unnecessary white spaces and converts "_" to spaces.
+
+```ruby
+'hello world!'.to_titleize
+"Hello World!"
+
+'HELLO WORLD!'.to_titleize
+"Hello World!"
+
+'hello_world!'.to_titleize
+"Hello World!"
+
+' hello world! '.to_titleize
+"Hello World!"
+```
+
 ### to yes no
 
 This function returns a string from a boolean to yes or no.
