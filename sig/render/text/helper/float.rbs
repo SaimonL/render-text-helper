@@ -1,0 +1,3 @@
+class Float
+  def add_percent_sign: -> String
+end

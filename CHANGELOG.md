@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.1] - 2025-14-10
+
+- Added add_percent_sign method that adds percentage to float
+
 ## [0.4.0] - 2025-17-02
 
 - Added to_titleize

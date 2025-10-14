@@ -3,6 +3,7 @@
 require_relative 'helper/version'
 require_relative 'helper/string'
 require_relative 'helper/boolean'
+require_relative 'helper/float'
 
 module Render
   module Text

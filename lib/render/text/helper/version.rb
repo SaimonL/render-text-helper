@@ -3,7 +3,7 @@
 module Render
   module Text
     module Helper
-      VERSION = '0.4.0'
+      VERSION = '0.4.1'
     end
   end
 end

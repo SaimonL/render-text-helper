@@ -118,6 +118,15 @@ false.to_yn(capital_letter: false)
 
 Returns 1 for true and 0 for false on a boolean object.
 
+### add_percent_sign
+
+It takes float and adds percentage to it.
+
+```ruby
+25.75.add_percent_sign
+'25.75%'
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/SaimonL/render-text-helper

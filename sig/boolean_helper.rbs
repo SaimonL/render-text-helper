@@ -1,0 +1,5 @@
+module BooleanHelper
+  def to_yn:(capital_letter: bool) -> String
+  def to_yes_no:(casting: Symbol) -> String
+  def to_i: -> Integer
+end
