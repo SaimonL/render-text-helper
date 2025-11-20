@@ -76,6 +76,21 @@ Titleize for none rails project. It also removes unnecessary white spaces and co
 "Hello World!"
 ```
 
+### To Letters And Numbers
+
+Strips all characters instead of letters, numbers and space.  
+It also trims spaces at the beginning and the end.  
+You have the option to disallow spaces as well.  
+This is good for common input like name, address, other standard writings.
+
+```ruby
+' A1!2@3#4$ 5%6^S7&8*9 F(0)-_=+Z|/?.>rlq<,*/ '.to_letters_and_numbers
+"A1234 56S789 F0Zrlq"
+
+' A1!2@3#4$ 5%6^S7&8*9 F(0)-_=+Z|/?.>rlq<,*/ '.to_letters_and_numbers(allow_space: false)
+"A123456S789F0Zrlq"
+```
+
 ### to yes no
 
 This function returns a string from a boolean to yes or no.

@@ -142,4 +142,21 @@ RSpec.describe String do
       it { is_expected.to eq('') }
     end
   end
+
+  describe '#to_letters_and_numbers' do
+    subject { data.to_letters_and_numbers(allow_space:) }
+
+    let(:data) { ' A1!2@3#4$ 5%6^S7&8*9 F(0)-_=+Z|/?.>rlq<,*/ ' }
+    let(:allow_space) { true }
+
+    context 'when allowing spaces' do
+      it { is_expected.to eq('A1234 56S789 F0Zrlq') }
+    end
+
+    context 'when not allowing spaces' do
+      let(:allow_space) { false }
+
+      it { is_expected.to eq('A123456S789F0Zrlq') }
+    end
+  end
 end

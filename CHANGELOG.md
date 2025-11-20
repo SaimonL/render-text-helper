@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.2] - 2025-20-11
+
+- Added to_letters_and_numbers method to string that removes all but letters and numbers
+
 ## [0.4.1] - 2025-14-10
 
 - Added add_percent_sign method that adds percentage to float

@@ -1,6 +1,8 @@
 class String
   def escaped_newline_to_newline: -> String
   def limit_print:(limit: Integer, more_indicator: String, indicator_length: Integer) -> String
+
+  def to_letters_and_numbers:(allow_space: bool) -> String
   def to_smart_array:(separator: String | nil) -> [String]
   def to_titleize: -> String
 end

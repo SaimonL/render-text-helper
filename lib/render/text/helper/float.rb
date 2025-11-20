@@ -3,8 +3,8 @@
 # Added methods to float
 class Float
   def add_percent_sign
-    return nil if self.nil?
+    return nil if nil?
 
-    self.to_s.concat('%')
+    to_s.concat('%')
   end
 end

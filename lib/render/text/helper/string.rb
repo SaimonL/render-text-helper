@@ -30,4 +30,14 @@ class String
 
     gsub('_', ' ').strip.split.map(&:capitalize).join(' ')
   end
+
+  def to_letters_and_numbers(allow_space: true)
+    return '' if self == ''
+
+    if allow_space
+      gsub(/[^a-zA-Z0-9 ]/, '').strip
+    else
+      gsub(/[^a-zA-Z0-9]/, '').strip
+    end
+  end
 end
